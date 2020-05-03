@@ -4,8 +4,12 @@ import 'status_camera.dart' as status_camera;
 import 'chats.dart' as chats;
 import 'status.dart' as status;
 import 'calls.dart' as calls;
+List<CameraDescription> cameras;
 
-void main() => runApp(WhatsApp());
+Future<Null> main() async{
+  cameras = await availableCameras();
+  runApp(WhatsApp());
+}
 
 enum Choice { group, broadcast, wweb, messages, settings }
 
@@ -14,14 +18,14 @@ class WhatsApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: WhatsAppHome(),
+      home: WhatsAppHome(cameras),
     );
   }
 }
 
 class WhatsAppHome extends StatefulWidget {
-  final List<CameraDescription> cameras;
-  WhatsAppHome({this.cameras});
+  var cameras;
+  WhatsAppHome(this.cameras);
   @override
   _WhatsAppHomeState createState() => _WhatsAppHomeState();
 }
@@ -107,7 +111,7 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
       body: TabBarView(
         controller: controller,
         children: <Widget>[
-          new status_camera.StatusCameraHome(),
+          new status_camera.StatusCameraHome(widget.cameras),
           new chats.ChatsHome(),
           new status.StatusHome(),
           new calls.CallsHome(),

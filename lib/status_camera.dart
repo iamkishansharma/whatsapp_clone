@@ -2,14 +2,10 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 
-List<CameraDescription> cameras;
-
-Future<void> main() async {
-  cameras = await availableCameras();
-  runApp(StatusCameraHome());
-}
-
 class StatusCameraHome extends StatefulWidget {
+  List<CameraDescription> cameras;
+  StatusCameraHome(this.cameras);
+
   @override
   _StatusCameraHomeState createState() => _StatusCameraHomeState();
 }
@@ -20,7 +16,7 @@ class _StatusCameraHomeState extends State<StatusCameraHome> {
   @override
   void initState() {
     super.initState();
-    controller = CameraController(cameras[0], ResolutionPreset.medium);
+    controller = CameraController(widget.cameras[0], ResolutionPreset.medium);
     controller.initialize().then((_) {
       if (!mounted) {
         return;

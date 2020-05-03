@@ -98,6 +98,6 @@ List<ChatModel> dummyData = [
     message: "Good",
     time: "8:30",
     avatarUrl:
-        "https://pbs.twimg.com/profile_images/864282616597405701/M-FEJMZ0.jpg",
+        "https://image.flaticon.com/icons/svg/1159/1159798.svg",
   ),
 ];
