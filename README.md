@@ -1,7 +1,9 @@
 # whatsapp_clone
 A WhatsApp clone UI
-![Splash Screen for WhatsApp CLone](assets/schreenshots/Screenshot_2020-05-23-17-47-06-608_com.example.whatsapp_clone.jpg)
-![Camera for WhatsApp CLone](assets/schreenshots/Screenshot_2020-05-23-17-47-17-570_com.example.whatsapp_clone.jpg)
+![Splash Screen for WhatsApp](https://github.com/iamkishansharma/whatsapp_clone/blob/master/assets/screenshots/Screenshot_2020-05-23-17-47-06-608_com.example.whatsapp_clone.jpg)
+![Camera Screen for WhatsApp](https://github.com/iamkishansharma/whatsapp_clone/blob/master/assets/screenshots/Screenshot_2020-05-23-17-47-17-570_com.example.whatsapp_clone.jpg)
+![Chats Screen for WhatsApp](https://github.com/iamkishansharma/whatsapp_clone/blob/master/assets/screenshots/Screenshot_2020-05-23-17-47-21-791_com.example.whatsapp_clone.jpg)
+![Status Screen for WhatsApp](https://github.com/iamkishansharma/whatsapp_clone/blob/master/assets/screenshots/Screenshot_2020-05-23-17-47-25-217_com.example.whatsapp_clone.jpg)
 
 
 
