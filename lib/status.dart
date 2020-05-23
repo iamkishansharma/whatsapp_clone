@@ -70,11 +70,10 @@ class _StatusHomeState extends State<StatusHome> {
                   ListTile(
                     leading: CircleAvatar(
                       radius: 30,
-                      backgroundImage: NetworkImage(
-                          "https://scontent.fbir1-1.fna.fbcdn.net/v/t1.0-9/fr/cp0/e15/q65/53100501_1057194901135476_7343742224678518784_o.jpg?_nc_cat=101&_nc_sid=85a577&efg=eyJpIjoidCJ9&_nc_ohc=JUvvj399w_cAX_W-lZz&_nc_ht=scontent.fbir1-1.fna&_nc_tp=14&oh=1d1b6119487c7fa7c43d8e3d609b8964&oe=5ED46944"),
+                      backgroundImage: NetworkImage('https://biprodfinal7.imgix.net/uploads/2016/11/424064249.jpg'),
                     ),
                     title: Text(
-                      "Kishan Kumar Sharma",
+                      "Hrithik Roshan",
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     subtitle: Text("Today, 06:16 PM"),

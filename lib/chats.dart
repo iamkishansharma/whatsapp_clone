@@ -27,7 +27,7 @@ class ChatsHomeState extends State<ChatsHome> {
                     child: SizedBox(
                       width:100,
                       height:100,
-                      child:Image.network(dummyData[i].avatarUrl,fit: BoxFit.cover,),
+                      child:Image.asset(dummyData[i].avatarUrl,fit: BoxFit.cover,),
                     ),
                   ),
                 ),
