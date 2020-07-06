@@ -12,11 +12,11 @@
 12         to allow setting breakpoints, to provide hot reload, etc.
 13    -->
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\debug\AndroidManifest.xml:6:5-66
-14-->E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\debug\AndroidManifest.xml:6:22-64
+14-->E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\debug\AndroidManifest.xml:6:5-66
+14-->E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\debug\AndroidManifest.xml:6:22-64
 15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-15-->[com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\e9c0c074e40cd20dbe0559a59e257b86\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:24:5-79
-15-->[com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\e9c0c074e40cd20dbe0559a59e257b86\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:24:22-76
+15-->[com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\fee1685721d76cde638b12a5aa0b0143\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:24:5-79
+15-->[com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\fee1685721d76cde638b12a5aa0b0143\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:24:22-76
 16    <!--
 17 io.flutter.app.FlutterApplication is an android.app.Application that
 18         calls FlutterMain.startInitialization(this); in its onCreate method.
@@ -25,30 +25,30 @@
 21         FlutterApplication and put your custom class here.
 22    -->
 23    <application
-23-->E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:8:5-46:19
+23-->E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:8:5-46:19
 24        android:name="io.flutter.app.FlutterApplication"
-24-->E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:9:9-57
+24-->E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:9:9-57
 25        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 25-->[androidx.core:core:1.1.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\a528b13ac93e64cafa3d0480e2c93207\core-1.1.0\AndroidManifest.xml:24:18-86
 26        android:debuggable="true"
 27        android:icon="@drawable/wicon"
-27-->E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:11:9-39
+27-->E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:11:9-39
 28        android:label="whatsapp_clone" >
-28-->E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:10:9-39
+28-->E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:10:9-39
 29        <activity
-29-->E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:12:9-40:20
+29-->E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:12:9-40:20
 30            android:name="com.example.whatsapp_clone.MainActivity"
-30-->E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:13:13-41
+30-->E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:13:13-41
 31            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-31-->E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:16:13-163
+31-->E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:16:13-163
 32            android:hardwareAccelerated="true"
-32-->E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:17:13-47
+32-->E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:17:13-47
 33            android:launchMode="singleTop"
-33-->E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:14:13-43
+33-->E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:14:13-43
 34            android:theme="@style/LaunchTheme"
-34-->E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:15:13-47
+34-->E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:15:13-47
 35            android:windowSoftInputMode="adjustResize" >
-35-->E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:18:13-55
+35-->E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:18:13-55
 36
 37            <!--
 38                 Specifies an Android theme to apply to this Activity as soon as
@@ -57,11 +57,11 @@
 41                 to determine the Window background behind the Flutter UI.
 42            -->
 43            <meta-data
-43-->E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:23:13-26:17
+43-->E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:23:13-26:17
 44                android:name="io.flutter.embedding.android.NormalTheme"
-44-->E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:24:15-70
+44-->E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:24:15-70
 45                android:resource="@style/NormalTheme" />
-45-->E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:25:15-52
+45-->E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:25:15-52
 46            <!--
 47                 Displays an Android View that continues showing the launch screen
 48                 Drawable until Flutter paints its first frame, then this splash
@@ -70,21 +70,21 @@
 51                 Flutter's first frame.
 52            -->
 53            <meta-data
-53-->E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:32:13-35:17
+53-->E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:32:13-35:17
 54                android:name="io.flutter.embedding.android.SplashScreenDrawable"
-54-->E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:33:15-79
+54-->E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:33:15-79
 55                android:resource="@drawable/launch_background" />
-55-->E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:34:15-61
+55-->E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:34:15-61
 56
 57            <intent-filter>
-57-->E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:36:13-39:29
+57-->E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:36:13-39:29
 58                <action android:name="android.intent.action.MAIN" />
-58-->E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:37:17-68
-58-->E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:37:25-66
+58-->E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:37:17-68
+58-->E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:37:25-66
 59
 60                <category android:name="android.intent.category.LAUNCHER" />
-60-->E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:38:17-76
-60-->E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:38:27-74
+60-->E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:38:17-76
+60-->E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:38:27-74
 61            </intent-filter>
 62        </activity>
 63        <!--
@@ -92,11 +92,11 @@
 65             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
 66        -->
 67        <meta-data
-67-->E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:43:9-45:33
+67-->E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:43:9-45:33
 68            android:name="flutterEmbedding"
-68-->E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:44:13-44
+68-->E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:44:13-44
 69            android:value="2" />
-69-->E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:45:13-30
+69-->E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:45:13-30
 70    </application>
 71
 72</manifest>

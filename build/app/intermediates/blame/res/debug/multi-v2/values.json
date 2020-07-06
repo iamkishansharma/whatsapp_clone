@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\FlutterProjects\\MoreFlutter\\whatsapp_clone\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "E:\\FlutterProjects\\MyFlutterPro\\whatsapp_clone\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-2\\files-2.1\\a528b13ac93e64cafa3d0480e2c93207\\core-1.1.0\\res\\values\\values.xml",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "E:\\FlutterProjects\\MoreFlutter\\whatsapp_clone\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "E:\\FlutterProjects\\MyFlutterPro\\whatsapp_clone\\android\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
@@ -42,7 +42,7 @@
                     }
                 },
                 {
-                    "source": "E:\\FlutterProjects\\MoreFlutter\\whatsapp_clone\\android\\app\\src\\main\\res\\values\\colors.xml",
+                    "source": "E:\\FlutterProjects\\MyFlutterPro\\whatsapp_clone\\android\\app\\src\\main\\res\\values\\colors.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

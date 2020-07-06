@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'status_camera.dart' as status_camera;
-import 'chats.dart' as chats;
-import 'status.dart' as status;
-import 'calls.dart' as calls;
+import 'package:whatsapp_clone/options_menu/settings.dart';
+import 'camera/status_camera.dart' as status_camera;
+import 'chats/chats.dart' as chats;
+import 'status/status.dart' as status;
+import 'calls/calls.dart' as calls;
 
 void main(){
   runApp(WhatsApp());
@@ -77,7 +78,23 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
           
           //POPUP MENU HERE
           PopupMenuButton<Choice>(
-            // onSelected: (Choice res){setState(() {_seletion = res;});},
+            onSelected: (Choice res){
+              setState(() {
+                // _seletion = res;
+                switch(res){
+                  case Choice.group: //jkl
+                    break;
+                  case Choice.broadcast: //jkl
+                    break;
+                  case Choice.wweb: //jkl
+                    break;
+                  case Choice.messages: 
+                    break;
+                  case Choice.settings:
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => SettingsPage()));
+                }
+              });
+            },
             itemBuilder: (BuildContext context) => <PopupMenuEntry<Choice>>[
               const PopupMenuItem<Choice>(
                 value: Choice.group,

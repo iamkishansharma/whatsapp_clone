@@ -1,16 +1,16 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:1:1-47:12
-INJECTED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:1:1-47:12
-INJECTED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:1:1-47:12
-INJECTED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:1:1-47:12
-MERGED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:1:1-47:12
-MERGED from [:path_provider] E:\FlutterProjects\MoreFlutter\whatsapp_clone\build\path_provider\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
-MERGED from [:path_provider_macos] E:\FlutterProjects\MoreFlutter\whatsapp_clone\build\path_provider_macos\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
-MERGED from [:video_player] E:\FlutterProjects\MoreFlutter\whatsapp_clone\build\video_player\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
-MERGED from [:fluttertoast] E:\FlutterProjects\MoreFlutter\whatsapp_clone\build\fluttertoast\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
-MERGED from [:sqflite] E:\FlutterProjects\MoreFlutter\whatsapp_clone\build\sqflite\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
-MERGED from [:video_player_web] E:\FlutterProjects\MoreFlutter\whatsapp_clone\build\video_player_web\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:1:1-47:12
+INJECTED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:1:1-47:12
+INJECTED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:1:1-47:12
+INJECTED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:1:1-47:12
+MERGED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:1:1-47:12
+MERGED from [:path_provider] E:\FlutterProjects\MyFlutterPro\whatsapp_clone\build\path_provider\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:path_provider_macos] E:\FlutterProjects\MyFlutterPro\whatsapp_clone\build\path_provider_macos\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:video_player] E:\FlutterProjects\MyFlutterPro\whatsapp_clone\build\video_player\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:fluttertoast] E:\FlutterProjects\MyFlutterPro\whatsapp_clone\build\fluttertoast\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:sqflite] E:\FlutterProjects\MyFlutterPro\whatsapp_clone\build\sqflite\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:video_player_web] E:\FlutterProjects\MyFlutterPro\whatsapp_clone\build\video_player_web\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\0986d0d74b8a2c7da8161f6370fc7744\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.0.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\615cab8ad6393a9c868d48761bbea666\activity-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\28d99d5113324aa067757f8ca41a426f\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -21,32 +21,32 @@ MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\hp\.gradle\cac
 MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\54d8b8735f730e83f07925f758092af3\savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\23edc849475fdda61367cb003f9b9f93\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\79f9d65ef8b1c716310f666473a689a7\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\7b0573790d3aff14b8cae74c9d02b9c2\jetified-exoplayer-hls-2.9.6\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\d55c1ee6571f73d9d695a43fd1bd5584\jetified-exoplayer-dash-2.9.6\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\c1cb894816dd54ccac1b569a321f4349\jetified-exoplayer-smoothstreaming-2.9.6\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\e9c0c074e40cd20dbe0559a59e257b86\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:17:1-26:12
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\b90787487a1a86c3460b04d21201c71e\jetified-exoplayer-hls-2.9.6\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\ac9d4e16daeb6426225e302c4c74383f\jetified-exoplayer-dash-2.9.6\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\9942df8cd675ce75c1ef59a9932e60a0\jetified-exoplayer-smoothstreaming-2.9.6\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\fee1685721d76cde638b12a5aa0b0143\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\077300052aa327ee6fc9bbb0ce309b24\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\3a7eb299570065a3866b140e1a95969b\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\b80fad55c42c418cc210e235056767fb\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
-INJECTED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\debug\AndroidManifest.xml:1:1-7:12
-INJECTED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\debug\AndroidManifest.xml:1:1-7:12
-INJECTED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\debug\AndroidManifest.xml:1:1-7:12
 	package
-		ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:2:5-41
-		INJECTED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml
-		INJECTED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\debug\AndroidManifest.xml
+		ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:2:5-41
+		INJECTED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml
+		INJECTED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\debug\AndroidManifest.xml
 	android:versionName
-		INJECTED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml
-		ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:1:1-47:12
-		INJECTED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\debug\AndroidManifest.xml
+		INJECTED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml
+		ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:1:1-47:12
+		INJECTED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\debug\AndroidManifest.xml
 	android:versionCode
-		INJECTED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml
-		ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:1:1-47:12
-		INJECTED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\debug\AndroidManifest.xml
+		INJECTED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml
+		ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:1:1-47:12
+		INJECTED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\debug\AndroidManifest.xml
 	xmlns:android
-		ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:1:11-69
+		ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:1:11-69
 application
-ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:8:5-46:19
+ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:8:5-46:19
 MERGED from [androidx.core:core:1.1.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\a528b13ac93e64cafa3d0480e2c93207\core-1.1.0\AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.1.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\a528b13ac93e64cafa3d0480e2c93207\core-1.1.0\AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\3a7eb299570065a3866b140e1a95969b\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
@@ -54,69 +54,69 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\hp
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\a528b13ac93e64cafa3d0480e2c93207\core-1.1.0\AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:10:9-39
+		ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:10:9-39
 	android:icon
-		ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:11:9-39
+		ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:11:9-39
 	android:name
-		ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:9:9-57
+		ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:9:9-57
 activity#com.example.whatsapp_clone.MainActivity
-ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:12:9-40:20
+ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:12:9-40:20
 	android:launchMode
-		ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:14:13-43
+		ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:14:13-43
 	android:hardwareAccelerated
-		ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:17:13-47
+		ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:17:13-47
 	android:windowSoftInputMode
-		ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:18:13-55
+		ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:18:13-55
 	android:configChanges
-		ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:16:13-163
+		ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:16:13-163
 	android:theme
-		ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:15:13-47
+		ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:15:13-47
 	android:name
-		ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:13:13-41
+		ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:13:13-41
 meta-data#io.flutter.embedding.android.NormalTheme
-ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:23:13-26:17
+ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:23:13-26:17
 	android:resource
-		ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:25:15-52
+		ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:25:15-52
 	android:name
-		ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:24:15-70
+		ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:24:15-70
 meta-data#io.flutter.embedding.android.SplashScreenDrawable
-ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:32:13-35:17
+ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:32:13-35:17
 	android:resource
-		ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:34:15-61
+		ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:34:15-61
 	android:name
-		ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:33:15-79
+		ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:33:15-79
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:36:13-39:29
+ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:36:13-39:29
 action#android.intent.action.MAIN
-ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:37:17-68
+ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:37:17-68
 	android:name
-		ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:37:25-66
+		ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:37:25-66
 category#android.intent.category.LAUNCHER
-ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:38:17-76
+ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:38:17-76
 	android:name
-		ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:38:27-74
+		ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:38:27-74
 meta-data#flutterEmbedding
-ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:43:9-45:33
+ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:43:9-45:33
 	android:value
-		ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:45:13-30
+		ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:45:13-30
 	android:name
-		ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml:44:13-44
+		ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml:44:13-44
 uses-sdk
-INJECTED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml
-INJECTED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml
-MERGED from [:path_provider] E:\FlutterProjects\MoreFlutter\whatsapp_clone\build\path_provider\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:path_provider] E:\FlutterProjects\MoreFlutter\whatsapp_clone\build\path_provider\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:path_provider_macos] E:\FlutterProjects\MoreFlutter\whatsapp_clone\build\path_provider_macos\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:path_provider_macos] E:\FlutterProjects\MoreFlutter\whatsapp_clone\build\path_provider_macos\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:video_player] E:\FlutterProjects\MoreFlutter\whatsapp_clone\build\video_player\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:video_player] E:\FlutterProjects\MoreFlutter\whatsapp_clone\build\video_player\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:fluttertoast] E:\FlutterProjects\MoreFlutter\whatsapp_clone\build\fluttertoast\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:fluttertoast] E:\FlutterProjects\MoreFlutter\whatsapp_clone\build\fluttertoast\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:sqflite] E:\FlutterProjects\MoreFlutter\whatsapp_clone\build\sqflite\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:sqflite] E:\FlutterProjects\MoreFlutter\whatsapp_clone\build\sqflite\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:video_player_web] E:\FlutterProjects\MoreFlutter\whatsapp_clone\build\video_player_web\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:video_player_web] E:\FlutterProjects\MoreFlutter\whatsapp_clone\build\video_player_web\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+INJECTED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml
+INJECTED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml
+MERGED from [:path_provider] E:\FlutterProjects\MyFlutterPro\whatsapp_clone\build\path_provider\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:path_provider] E:\FlutterProjects\MyFlutterPro\whatsapp_clone\build\path_provider\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:path_provider_macos] E:\FlutterProjects\MyFlutterPro\whatsapp_clone\build\path_provider_macos\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:path_provider_macos] E:\FlutterProjects\MyFlutterPro\whatsapp_clone\build\path_provider_macos\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:video_player] E:\FlutterProjects\MyFlutterPro\whatsapp_clone\build\video_player\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:video_player] E:\FlutterProjects\MyFlutterPro\whatsapp_clone\build\video_player\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:fluttertoast] E:\FlutterProjects\MyFlutterPro\whatsapp_clone\build\fluttertoast\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:fluttertoast] E:\FlutterProjects\MyFlutterPro\whatsapp_clone\build\fluttertoast\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:sqflite] E:\FlutterProjects\MyFlutterPro\whatsapp_clone\build\sqflite\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:sqflite] E:\FlutterProjects\MyFlutterPro\whatsapp_clone\build\sqflite\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:video_player_web] E:\FlutterProjects\MyFlutterPro\whatsapp_clone\build\video_player_web\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:video_player_web] E:\FlutterProjects\MyFlutterPro\whatsapp_clone\build\video_player_web\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\0986d0d74b8a2c7da8161f6370fc7744\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\0986d0d74b8a2c7da8161f6370fc7744\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.0.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\615cab8ad6393a9c868d48761bbea666\activity-1.0.0\AndroidManifest.xml:20:5-22:41
@@ -137,33 +137,33 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\hp\.gradle\ca
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\23edc849475fdda61367cb003f9b9f93\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\79f9d65ef8b1c716310f666473a689a7\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\79f9d65ef8b1c716310f666473a689a7\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\7b0573790d3aff14b8cae74c9d02b9c2\jetified-exoplayer-hls-2.9.6\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\7b0573790d3aff14b8cae74c9d02b9c2\jetified-exoplayer-hls-2.9.6\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\d55c1ee6571f73d9d695a43fd1bd5584\jetified-exoplayer-dash-2.9.6\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\d55c1ee6571f73d9d695a43fd1bd5584\jetified-exoplayer-dash-2.9.6\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\c1cb894816dd54ccac1b569a321f4349\jetified-exoplayer-smoothstreaming-2.9.6\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\c1cb894816dd54ccac1b569a321f4349\jetified-exoplayer-smoothstreaming-2.9.6\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\e9c0c074e40cd20dbe0559a59e257b86\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\e9c0c074e40cd20dbe0559a59e257b86\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\b90787487a1a86c3460b04d21201c71e\jetified-exoplayer-hls-2.9.6\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\b90787487a1a86c3460b04d21201c71e\jetified-exoplayer-hls-2.9.6\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\ac9d4e16daeb6426225e302c4c74383f\jetified-exoplayer-dash-2.9.6\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\ac9d4e16daeb6426225e302c4c74383f\jetified-exoplayer-dash-2.9.6\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\9942df8cd675ce75c1ef59a9932e60a0\jetified-exoplayer-smoothstreaming-2.9.6\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\9942df8cd675ce75c1ef59a9932e60a0\jetified-exoplayer-smoothstreaming-2.9.6\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\fee1685721d76cde638b12a5aa0b0143\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\fee1685721d76cde638b12a5aa0b0143\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\077300052aa327ee6fc9bbb0ce309b24\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\077300052aa327ee6fc9bbb0ce309b24\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\3a7eb299570065a3866b140e1a95969b\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\3a7eb299570065a3866b140e1a95969b\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\b80fad55c42c418cc210e235056767fb\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\b80fad55c42c418cc210e235056767fb\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
-INJECTED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\debug\AndroidManifest.xml
-INJECTED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\debug\AndroidManifest.xml
+INJECTED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\debug\AndroidManifest.xml
+INJECTED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\debug\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml
-		INJECTED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\debug\AndroidManifest.xml
+		INJECTED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml
+		INJECTED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\debug\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\main\AndroidManifest.xml
-		INJECTED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\debug\AndroidManifest.xml
+		INJECTED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\main\AndroidManifest.xml
+		INJECTED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\debug\AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\debug\AndroidManifest.xml:6:5-66
+ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\debug\AndroidManifest.xml:6:5-66
 	android:name
-		ADDED from E:\FlutterProjects\MoreFlutter\whatsapp_clone\android\app\src\debug\AndroidManifest.xml:6:22-64
+		ADDED from E:\FlutterProjects\MyFlutterPro\whatsapp_clone\android\app\src\debug\AndroidManifest.xml:6:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\e9c0c074e40cd20dbe0559a59e257b86\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:24:5-79
+ADDED from [com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\fee1685721d76cde638b12a5aa0b0143\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:24:5-79
 	android:name
-		ADDED from [com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\e9c0c074e40cd20dbe0559a59e257b86\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:24:22-76
+		ADDED from [com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\fee1685721d76cde638b12a5aa0b0143\jetified-exoplayer-core-2.9.6\AndroidManifest.xml:24:22-76
