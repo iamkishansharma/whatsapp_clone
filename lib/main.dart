@@ -5,7 +5,7 @@ import 'chats/chats.dart' as chats;
 import 'status/status.dart' as status;
 import 'calls/calls.dart' as calls;
 
-void main(){
+void main() {
   runApp(WhatsApp());
 }
 
@@ -34,6 +34,7 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
     controller = new TabController(length: 4, vsync: this);
     super.initState();
   }
+
   @override
   void dispose() {
     controller.dispose();
@@ -75,23 +76,26 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
             ),
             onPressed: () {},
           ),
-          
+
           //POPUP MENU HERE
           PopupMenuButton<Choice>(
-            onSelected: (Choice res){
+            onSelected: (Choice res) {
               setState(() {
                 // _seletion = res;
-                switch(res){
+                switch (res) {
                   case Choice.group: //jkl
                     break;
                   case Choice.broadcast: //jkl
                     break;
                   case Choice.wweb: //jkl
                     break;
-                  case Choice.messages: 
+                  case Choice.messages:
                     break;
                   case Choice.settings:
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => SettingsPage()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => SettingsPage()));
                 }
               });
             },
