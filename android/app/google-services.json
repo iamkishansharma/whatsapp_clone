@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "643568987513",
+    "firebase_url": "https://heycodemessaging.firebaseio.com",
+    "project_id": "heycodemessaging",
+    "storage_bucket": "heycodemessaging.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:643568987513:android:3eb9f30500877d55f5d3a8",
+        "android_client_info": {
+          "package_name": "com.example.whatsapp_clone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "643568987513-74o1ee446vajha6r6t3otov32a3vb311.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.whatsapp_clone",
+            "certificate_hash": "5f57e46b579468ca256706145c44d34d02541539"
+          }
+        },
+        {
+          "client_id": "643568987513-rkmindt23s4jdcpto7icr59kuvh07395.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUFkR2szKF6m5TRyuXBEPAAEXflu5zRkM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "643568987513-rkmindt23s4jdcpto7icr59kuvh07395.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

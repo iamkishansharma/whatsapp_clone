@@ -10,7 +10,8 @@
         android:label="whatsapp_clone"
         android:icon="@drawable/wicon">
         <activity
-            android:name=".MainActivity"
+
+        android:name=".MainActivity"
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"

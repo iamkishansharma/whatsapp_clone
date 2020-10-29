@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:whatsapp_clone/Login.dart';
 
 
 class SettingsPage extends StatelessWidget {
@@ -19,7 +21,7 @@ class SettingsHome extends StatefulWidget {
 
 class _SettingsHomeState extends State<SettingsHome> {
 
-  String btnTxt = "Press Here";
+  String btnTxt = "Logout";
   Color bg =Colors.white;
   @override
   Widget build(BuildContext context) {
@@ -27,7 +29,7 @@ class _SettingsHomeState extends State<SettingsHome> {
       color: bg,
       child: Center(
         child: RaisedButton(child: Text(btnTxt),
-          onPressed: (){
+          onPressed: () async{
             Scaffold.of(context).showSnackBar(
                 SnackBar(
                   backgroundColor: Colors.black87,
@@ -44,6 +46,11 @@ class _SettingsHomeState extends State<SettingsHome> {
                 ),
                 )
               );
+            await FirebaseAuth.instance.signOut();//LOGOUT
+            FirebaseUser firebaseUser = await FirebaseAuth.instance.currentUser();
+            if(firebaseUser==null){
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginScreen()));
+            }
           }
         )
       ),
