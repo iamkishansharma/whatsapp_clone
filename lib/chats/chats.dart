@@ -1,5 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+
+import '../details_chat.dart';
 
 class ChatsHome extends StatefulWidget {
   @override
@@ -8,21 +11,32 @@ class ChatsHome extends StatefulWidget {
   }
 }
 
+
 class ChatsHomeState extends State<ChatsHome> {
+  Future<String> gett() async {
+    FirebaseUser user = await FirebaseAuth.instance.currentUser();
+    return user.email;
+  }
 
   Widget buildListItem(BuildContext context, DocumentSnapshot snapshot) {
     final row = Users.fromSnapshot(snapshot);
     return InkWell(
-      onTap: (){
+      onTap: () async {
         print(row.fullname);
+        print("${await gett()}  ${row.email}");
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => ChatDetail(
+                    name: row.fullname, photo: "assets/images/pro1.png")));
       },
       child: Column(
         children: <Widget>[
-          new Divider(
+          Divider(
             height: 10.0,
           ),
-          new ListTile(
-            leading: new CircleAvatar(
+          ListTile(
+            leading: CircleAvatar(
               foregroundColor: Theme.of(context).primaryColor,
               backgroundColor: Colors.grey,
               radius: 30.0,
@@ -37,23 +51,23 @@ class ChatsHomeState extends State<ChatsHome> {
                 ),
               ),
             ),
-            title: new Row(
+            title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                new Text(
+                Text(
                   row.fullname,
-                  style: new TextStyle(fontWeight: FontWeight.bold),
+                  style: TextStyle(fontWeight: FontWeight.bold),
                 ),
-                new Text(
-                  row.time==null?"":row.time,
-                  style: new TextStyle(color: Colors.grey, fontSize: 14.0),
+                Text(
+                  row.time == null ? "" : row.time,
+                  style: TextStyle(color: Colors.grey, fontSize: 14.0),
                 ),
               ],
             ),
-            subtitle: new Container(
+            subtitle: Container(
               padding: const EdgeInsets.only(top: 5.0),
-              child: new Text(
-                row.recentMsg==null?"":row.recentMsg,
+              child: Text(
+                row.recentMsg == null ? "" : row.recentMsg,
                 style: new TextStyle(color: Colors.grey, fontSize: 15.0),
               ),
             ),

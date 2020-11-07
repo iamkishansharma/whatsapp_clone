@@ -1,5 +1,4 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/Login.dart';
 import 'package:whatsapp_clone/options_menu/settings.dart';
@@ -13,10 +12,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   FirebaseUser user1 = await FirebaseAuth.instance.currentUser();
-  FirebaseAuth.instance
-      .onAuthStateChanged
-      .listen((FirebaseUser user) {
-
+  FirebaseAuth.instance.onAuthStateChanged.listen((FirebaseUser user) {
     if (user1 == null && user == null) {
       print('User is currently signed out!');
       runApp(LoginScreen());
@@ -49,8 +45,7 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
   TabController controller;
 
   @override
-  void initState(){
-
+  void initState() {
     controller = new TabController(length: 4, vsync: this);
     super.initState();
   }

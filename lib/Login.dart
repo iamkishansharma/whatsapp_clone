@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
@@ -19,29 +20,10 @@ class LoginScreenHome extends StatefulWidget {
   @override
   _LoginScreenHomeState createState() => _LoginScreenHomeState();
 }
+
 class _LoginScreenHomeState extends State<LoginScreenHome> {
   TextEditingController _email = TextEditingController();
   TextEditingController _password = TextEditingController();
-  FirebaseAuth auth = FirebaseAuth.instance;
-
-  Future<FirebaseUser> signInWithGoogle() async {
-    // Trigger the authentication flow
-    final GoogleSignInAccount googleUser = await GoogleSignIn().signIn();
-    // Obtain the auth details from the request
-    final GoogleSignInAuthentication googleAuth =
-    await googleUser.authentication;
-    // Create a new credential
-    final AuthCredential credential = GoogleAuthProvider.getCredential(
-      accessToken: googleAuth.accessToken,
-      idToken: googleAuth.idToken,
-    );
-    // Once signed in, return the UserCredential
-    // return await FirebaseAuth.instance.signInWithCredential(credential);
-    final AuthResult authResult = await auth.signInWithCredential(credential);
-    FirebaseUser user = authResult.user;
-    print("signed in " + user.displayName);
-    return user;
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -55,26 +37,7 @@ class _LoginScreenHomeState extends State<LoginScreenHome> {
               children: <Widget>[
                 _getHeader(),
                 _getTextFields(_email, _password),
-                Container(
-                  width: 300,
-                  alignment: AlignmentDirectional.center,
-                  height: 50,
-                  child: FlatButton(
-                    textColor: Colors.white,
-                    color: Colors.white,
-                    child: Image.asset(
-                      "assets/images/googlelo.png",
-                      alignment: AlignmentDirectional.center,
-                    ),
-                    onPressed: () async {
-                      signInWithGoogle(); //signin with google
-                      //Goto Home Screen
-                    },
-                    shape: new RoundedRectangleBorder(
-                      borderRadius: new BorderRadius.circular(30.0),
-                    ),
-                  ),
-                ),
+                _getGoogleSignIn(),
                 _getSignIn(_email, _password, context),
                 _getBottomRow(context),
               ],
@@ -86,7 +49,55 @@ class _LoginScreenHomeState extends State<LoginScreenHome> {
   }
 }
 
+//sign in with google function
+Future<FirebaseUser> signInWithGoogle() async {
+  FirebaseAuth auth = FirebaseAuth.instance;
+  // Trigger the authentication flow
+  final GoogleSignInAccount googleUser = await GoogleSignIn().signIn();
+  // Obtain the auth details from the request
+  final GoogleSignInAuthentication googleAuth =
+  await googleUser.authentication;
+  // Create a new credential
+  final AuthCredential credential = GoogleAuthProvider.getCredential(
+    accessToken: googleAuth.accessToken,
+    idToken: googleAuth.idToken,
+  );
+  // Once signed in, return the UserCredential
+  // return await FirebaseAuth.instance.signInWithCredential(credential);
+  final AuthResult authResult = await auth.signInWithCredential(credential);
+  FirebaseUser user = authResult.user;
+  print("signed in " + user.displayName);
+  return user;
+}
 
+//Google sign in widget
+_getGoogleSignIn(){
+  return Container(
+    width: 300,
+    alignment: AlignmentDirectional.center,
+    height: 50,
+    child: FlatButton(
+      textColor: Colors.white,
+      color: Colors.white,
+      child: Padding(
+        padding: EdgeInsets.all(10),
+        child: Image.asset(
+          "assets/images/googlelo.png",
+          alignment: AlignmentDirectional.center,
+        ),
+      ),
+      onPressed: () async {
+        signInWithGoogle(); //signin with google
+        //Goto Home Screen
+      },
+      shape: new RoundedRectangleBorder(
+        borderRadius: new BorderRadius.circular(30.0),
+      ),
+    ),
+  );
+}
+
+//don't have account and Password Reset Widget
 _getBottomRow(BuildContext context) {
   return Expanded(
     flex: 1,
@@ -130,10 +141,14 @@ _getBottomRow(BuildContext context) {
   );
 }
 
+//Email & Password sign in button widget
 _getSignIn(_email, _password, context) {
   return FlatButton(
     onPressed: () async {
-      if (_email.text.toString() != null && _password.text.toString() != null) {
+      if (_email.text.toString() != null &&
+          _email.text.toString().length > 0 &&
+          _password.text.toString().length > 0 &&
+          _password.text.toString() != null) {
         AuthResult authResult;
         FirebaseAuth auth = FirebaseAuth.instance;
 
@@ -143,8 +158,10 @@ _getSignIn(_email, _password, context) {
         } catch (e) {
           if (e.code == 'user-not-found') {
             //signUp first
-            Navigator.pushReplacement(//goto main screen
-                context, MaterialPageRoute(builder: (context) => SignUpScreen()));
+            Navigator.pushReplacement(
+                //goto main screen
+                context,
+                MaterialPageRoute(builder: (context) => SignUpScreen()));
           } else if (e.code == 'wrong-password') {
             print('Wrong password provided for that user.');
           }
@@ -152,8 +169,10 @@ _getSignIn(_email, _password, context) {
         if (authResult != null) {
           print("${_email.text} has been Logged In..");
           //goto home
-          Navigator.pushReplacement(//goto main screen
-              context, MaterialPageRoute(builder: (context) => WhatsApp()));
+          Navigator.pushReplacement(
+              //goto main screen
+              context,
+              MaterialPageRoute(builder: (context) => WhatsApp()));
         }
       } else {
         print("Fill the fields....................");
@@ -183,6 +202,7 @@ _getSignIn(_email, _password, context) {
   );
 }
 
+//TextField widgets for asking email & password
 _getTextFields(_email, _password) {
   return Expanded(
     flex: 2,

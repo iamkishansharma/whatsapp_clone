@@ -1,13 +1,16 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+
 import 'Login.dart';
 
 class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.red,
         body: MySignUp(),
@@ -26,7 +29,6 @@ class _MySignUpState extends State<MySignUp> {
   TextEditingController _password = TextEditingController();
   TextEditingController _name = TextEditingController();
 
-
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -36,6 +38,7 @@ class _MySignUpState extends State<MySignUp> {
           child: Column(
             children: <Widget>[
               _getHeader(),
+              _getImage(context),
               _getTextFields(_email, _password, _name),
               _getSignUp(_email, _password, _name, context),
               _getBottomRow(context),
@@ -74,16 +77,16 @@ _getBottomRow(context) {
   );
 }
 
-
-void addUser(email,fullname) async{
-  FirebaseUser firebaseUser  = await FirebaseAuth.instance.currentUser();
-  DocumentReference documentReference = Firestore.instance.collection('users').document(firebaseUser.uid);
+void addUser(email, fullname) async {
+  FirebaseUser firebaseUser = await FirebaseAuth.instance.currentUser();
+  DocumentReference documentReference =
+      Firestore.instance.collection('users').document(firebaseUser.uid);
   // Call the user's CollectionReference to add a new user
   return documentReference
       .setData({
-    'fullname': fullname, // John Doe
-    'email': email,
-  })
+        'fullname': fullname, // John Doe
+        'email': email,
+      })
       .then((value) => print("User Added"))
       .catchError((error) => print("Failed to add user: $error"));
 }
@@ -91,18 +94,26 @@ void addUser(email,fullname) async{
 _getSignUp(_email, _password, _name, context) {
   return FlatButton(
     onPressed: () async {
-      FirebaseAuth auth = FirebaseAuth.instance;
-      final AuthResult authResult =
-          await auth.createUserWithEmailAndPassword(
-              email: _email.text, password: _password.text);
-      if (authResult.additionalUserInfo.isNewUser != null) {
-        print("${_email.text} has been Register..");
+      if (_email.text.toString() != null &&
+          _email.text.toString().length > 0 &&
+          _password.text.toString() != null &&
+          _password.text.toString().length > 0 &&
+          _name.text.toString() != null &&
+          _name.text.toString().length > 0) {
+        FirebaseAuth auth = FirebaseAuth.instance;
+        final AuthResult authResult = await auth.createUserWithEmailAndPassword(
+            email: _email.text, password: _password.text);
+        if (authResult.additionalUserInfo.isNewUser != null) {
+          print("${_email.text} has been Register..");
 
-        addUser(_email.text,_name.text);
-        Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-                builder: (context) => LoginScreen())); //Goto Login Screen
+          addUser(_email.text, _name.text);
+          Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => LoginScreen())); //Goto Login Screen
+        }
+      } else {
+        print("Add all the fields..........");
       }
     },
     child: Expanded(
@@ -157,7 +168,6 @@ _getTextFields(_email, _password, _name) {
         ),
         TextField(
           controller: _email,
-          textAlign: TextAlign.center,
           decoration: InputDecoration(
               hintText: "example@email.com",
               icon: Icon(
@@ -197,13 +207,37 @@ _getTextFields(_email, _password, _name) {
 
 _getHeader() {
   return Expanded(
-    flex: 3,
+    flex: 2,
     child: Container(
       alignment: Alignment.bottomLeft,
       child: Text(
         'Create\nAccount',
         style: TextStyle(
             color: Colors.white, fontSize: 60, fontWeight: FontWeight.bold),
+      ),
+    ),
+  );
+}
+_getImage(context) {
+  return Expanded(
+    flex: 1,
+    child: GestureDetector(
+      onTap: (){
+        print("Image");
+      },
+      child: CircleAvatar(
+        backgroundColor: Colors.grey,
+        radius: MediaQuery.of(context).size.width/2,
+        child: ClipOval(
+          child: SizedBox(
+            width: MediaQuery.of(context).size.width/4,
+            height: 500,
+            child: Image.asset(
+              "assets/images/pro1.png",
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
       ),
     ),
   );
