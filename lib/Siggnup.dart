@@ -3,8 +3,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-
 import 'Login.dart';
+import 'Constants.dart' as cons;
 
 class SignUpScreen extends StatelessWidget {
   @override
@@ -12,6 +12,7 @@ class SignUpScreen extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        resizeToAvoidBottomInset:true,
         backgroundColor: Colors.red,
         body: MySignUp(),
       ),
@@ -65,7 +66,7 @@ _getBottomRow(context) {
             'Already have an account?\nSign In',
             textAlign: TextAlign.center,
             style: TextStyle(
-              color: Colors.white,
+              color: cons.appTextColor,
               fontSize: 15,
               fontWeight: FontWeight.w500,
               decoration: TextDecoration.none,
@@ -124,14 +125,14 @@ _getSignUp(_email, _password, _name, context) {
           Text(
             'Sign up',
             style: TextStyle(
-                color: Colors.white, fontSize: 25, fontWeight: FontWeight.w500),
+                color: cons.appTextColor, fontSize: 25, fontWeight: FontWeight.w500),
           ),
           CircleAvatar(
             backgroundColor: Colors.grey.shade800,
             radius: 40,
             child: Icon(
               Icons.arrow_forward,
-              color: Colors.white,
+              color: cons.appTextColor,
             ),
           ),
         ],
@@ -142,7 +143,7 @@ _getSignUp(_email, _password, _name, context) {
 
 _getTextFields(_email, _password, _name) {
   return Expanded(
-    flex: 4,
+    flex: 3,
     child: Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
@@ -155,13 +156,13 @@ _getTextFields(_email, _password, _name) {
               hintText: "John Smith",
               icon: Icon(
                 Icons.person,
-                color: Colors.white,
+                color: cons.appTextColor,
               ),
-              hintStyle: TextStyle(color: Colors.white70),
+              hintStyle: TextStyle(color: cons.appHintColor),
               enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.white)),
+                  borderSide: BorderSide(color: cons.appTextColor)),
               labelText: 'Name',
-              labelStyle: TextStyle(color: Colors.white)),
+              labelStyle: TextStyle(color: cons.appTextColor)),
         ),
         SizedBox(
           height: 15,
@@ -172,13 +173,13 @@ _getTextFields(_email, _password, _name) {
               hintText: "example@email.com",
               icon: Icon(
                 Icons.email,
-                color: Colors.white,
+                color: cons.appTextColor,
               ),
-              hintStyle: TextStyle(color: Colors.white70),
+              hintStyle: TextStyle(color: cons.appHintColor),
               enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.white)),
+                  borderSide: BorderSide(color: cons.appTextColor)),
               labelText: 'Email',
-              labelStyle: TextStyle(color: Colors.white)),
+              labelStyle: TextStyle(color: cons.appTextColor)),
         ),
         SizedBox(
           height: 15,
@@ -188,14 +189,14 @@ _getTextFields(_email, _password, _name) {
           decoration: InputDecoration(
               icon: Icon(
                 Icons.lock,
-                color: Colors.white,
+                color: cons.appTextColor,
               ),
               hintText: "Password",
-              hintStyle: TextStyle(color: Colors.white70),
+              hintStyle: TextStyle(color: cons.appHintColor),
               enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.white)),
+                  borderSide: BorderSide(color: cons.appTextColor)),
               labelText: 'Password',
-              labelStyle: TextStyle(color: Colors.white)),
+              labelStyle: TextStyle(color: cons.appTextColor)),
         ),
         SizedBox(
           height: 25,
@@ -211,27 +212,27 @@ _getHeader() {
     child: Container(
       alignment: Alignment.bottomLeft,
       child: Text(
-        'Create\nAccount',
+        'Create\n       Account',
         style: TextStyle(
-            color: Colors.white, fontSize: 60, fontWeight: FontWeight.bold),
+            color: cons.appTextColor, fontSize: 50, fontWeight: FontWeight.bold),
       ),
     ),
   );
 }
 _getImage(context) {
   return Expanded(
-    flex: 1,
-    child: GestureDetector(
+    flex: 2,
+    child: InkWell(
       onTap: (){
         print("Image");
       },
       child: CircleAvatar(
-        backgroundColor: Colors.grey,
-        radius: MediaQuery.of(context).size.width/2,
+        backgroundColor: cons.mainColor,
+        radius: MediaQuery.of(context).size.width/4,
         child: ClipOval(
           child: SizedBox(
-            width: MediaQuery.of(context).size.width/4,
-            height: 500,
+            width: MediaQuery.of(context).size.width/2.2,
+            height: MediaQuery.of(context).size.width/2.2,
             child: Image.asset(
               "assets/images/pro1.png",
               fit: BoxFit.cover,

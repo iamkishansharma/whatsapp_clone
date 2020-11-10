@@ -1,8 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/Login.dart';
+import 'Login.dart';
 import 'package:whatsapp_clone/options_menu/settings.dart';
-
+import 'Constants.dart' as cons;
 import 'calls/calls.dart' as calls;
 import 'camera/status_camera.dart' as status_camera;
 import 'chats/chats.dart' as chats;
@@ -12,15 +12,13 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   FirebaseUser user1 = await FirebaseAuth.instance.currentUser();
-  FirebaseAuth.instance.onAuthStateChanged.listen((FirebaseUser user) {
-    if (user1 == null && user == null) {
-      print('User is currently signed out!');
-      runApp(LoginScreen());
-    } else {
-      print('User is signed in!');
-      runApp(WhatsApp());
-    }
-  });
+  if (user1==null) {
+    print('User is currently signed out!');
+    runApp(LoginScreen());
+  } else {
+    print('User is signed in!');
+    runApp(WhatsApp());
+  }
 }
 
 enum Choice { group, broadcast, wweb, messages, settings }
@@ -29,6 +27,9 @@ class WhatsApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
       debugShowCheckedModeBanner: false,
       home: WhatsAppHome(),
     );
@@ -61,12 +62,13 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: cons.appBackgroundColor,
       appBar: AppBar(
         title: Text("WhatsApp"),
-        backgroundColor: Color(0xff076E64),
+        backgroundColor: cons.mainColor,
         bottom: TabBar(
           controller: controller,
-          indicatorColor: Colors.white,
+          indicatorColor: cons.appTextColor,
           tabs: <Widget>[
             Tab(
               icon: Icon(
@@ -88,7 +90,7 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
           IconButton(
             icon: Icon(
               Icons.search,
-              color: Colors.white,
+              color: cons.appBackgroundColor,
             ),
             onPressed: () {},
           ),

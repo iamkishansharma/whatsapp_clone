@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-
+import 'Constants.dart' as colors;
 import 'Siggnup.dart';
 import 'main.dart';
 
@@ -28,7 +28,8 @@ class _LoginScreenHomeState extends State<LoginScreenHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.redAccent,
+      resizeToAvoidBottomInset:true,
+      backgroundColor: colors.mainLightColor,
       body: Stack(
         children: <Widget>[
           Padding(
@@ -55,8 +56,7 @@ Future<FirebaseUser> signInWithGoogle() async {
   // Trigger the authentication flow
   final GoogleSignInAccount googleUser = await GoogleSignIn().signIn();
   // Obtain the auth details from the request
-  final GoogleSignInAuthentication googleAuth =
-  await googleUser.authentication;
+  final GoogleSignInAuthentication googleAuth = await googleUser.authentication;
   // Create a new credential
   final AuthCredential credential = GoogleAuthProvider.getCredential(
     accessToken: googleAuth.accessToken,
@@ -71,14 +71,14 @@ Future<FirebaseUser> signInWithGoogle() async {
 }
 
 //Google sign in widget
-_getGoogleSignIn(){
+_getGoogleSignIn() {
   return Container(
     width: 300,
     alignment: AlignmentDirectional.center,
     height: 50,
     child: FlatButton(
-      textColor: Colors.white,
-      color: Colors.white,
+      textColor: colors.appTextColor,
+      color: colors.appBackgroundColor,
       child: Padding(
         padding: EdgeInsets.all(10),
         child: Image.asset(
@@ -113,7 +113,7 @@ _getBottomRow(BuildContext context) {
             "Don't have an Account \nSign Up",
             textAlign: TextAlign.center,
             style: TextStyle(
-              color: Colors.white,
+              color: colors.appTextColor,
               fontSize: 15,
               fontWeight: FontWeight.w500,
               decoration: TextDecoration.none,
@@ -129,7 +129,7 @@ _getBottomRow(BuildContext context) {
             'Forget password?\nReset',
             textAlign: TextAlign.center,
             style: TextStyle(
-              color: Colors.white,
+              color: colors.appBackgroundColor,
               fontSize: 15,
               fontWeight: FontWeight.w500,
               decoration: TextDecoration.none,
@@ -186,14 +186,16 @@ _getSignIn(_email, _password, context) {
           Text(
             'Sign In',
             style: TextStyle(
-                color: Colors.white, fontSize: 25, fontWeight: FontWeight.w500),
+                color: colors.appTextColor,
+                fontSize: 25,
+                fontWeight: FontWeight.w500),
           ),
           CircleAvatar(
             backgroundColor: Colors.grey.shade800,
             radius: 40,
             child: Icon(
               Icons.arrow_forward,
-              color: Colors.white,
+              color: colors.appTextColor,
             ),
           ),
         ],
@@ -218,13 +220,13 @@ _getTextFields(_email, _password) {
               hintText: "example@email.com",
               icon: Icon(
                 Icons.email,
-                color: Colors.white,
+                color: colors.appTextColor,
               ),
-              hintStyle: TextStyle(color: Colors.white70),
+              hintStyle: TextStyle(color: colors.appHintColor),
               enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.white)),
+                  borderSide: BorderSide(color: colors.appTextColor)),
               labelText: 'Email',
-              labelStyle: TextStyle(color: Colors.white)),
+              labelStyle: TextStyle(color: colors.appTextColor)),
         ),
         SizedBox(
           height: 15,
@@ -234,14 +236,14 @@ _getTextFields(_email, _password) {
           decoration: InputDecoration(
               icon: Icon(
                 Icons.lock,
-                color: Colors.white,
+                color: colors.appTextColor,
               ),
               hintText: "Password",
-              hintStyle: TextStyle(color: Colors.white70),
+              hintStyle: TextStyle(color: colors.appHintColor),
               enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.white)),
+                  borderSide: BorderSide(color: colors.appTextColor)),
               labelText: 'Password',
-              labelStyle: TextStyle(color: Colors.white)),
+              labelStyle: TextStyle(color: colors.appTextColor)),
         ),
         SizedBox(
           height: 15,
@@ -259,7 +261,9 @@ _getHeader() {
       child: Text(
         'Welcome!\nSign In',
         style: TextStyle(
-            color: Colors.white, fontSize: 60, fontWeight: FontWeight.bold),
+            color: colors.appTextColor,
+            fontSize: 60,
+            fontWeight: FontWeight.bold),
       ),
     ),
   );

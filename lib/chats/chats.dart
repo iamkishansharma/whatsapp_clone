@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
+import 'package:whatsapp_clone/Constants.dart' as cons;
 import '../details_chat.dart';
 
 class ChatsHome extends StatefulWidget {
@@ -37,8 +38,8 @@ class ChatsHomeState extends State<ChatsHome> {
           ),
           ListTile(
             leading: CircleAvatar(
-              foregroundColor: Theme.of(context).primaryColor,
-              backgroundColor: Colors.grey,
+              foregroundColor: cons.appTextColor,
+              backgroundColor: cons.appTickColor,
               radius: 30.0,
               child: ClipOval(
                 child: SizedBox(
@@ -60,7 +61,7 @@ class ChatsHomeState extends State<ChatsHome> {
                 ),
                 Text(
                   row.time == null ? "" : row.time,
-                  style: TextStyle(color: Colors.grey, fontSize: 14.0),
+                  style: TextStyle(color: cons.appTickColor, fontSize: 14.0),
                 ),
               ],
             ),
@@ -68,7 +69,7 @@ class ChatsHomeState extends State<ChatsHome> {
               padding: const EdgeInsets.only(top: 5.0),
               child: Text(
                 row.recentMsg == null ? "" : row.recentMsg,
-                style: new TextStyle(color: Colors.grey, fontSize: 15.0),
+                style: new TextStyle(color: cons.appTickColor, fontSize: 15.0),
               ),
             ),
           )

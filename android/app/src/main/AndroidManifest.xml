@@ -8,7 +8,7 @@
     <application
         android:name="io.flutter.app.FlutterApplication"
         android:label="whatsapp_clone"
-        android:icon="@drawable/wicon">
+        android:icon="@mipmap/ic_launcher">
         <activity
 
         android:name=".MainActivity"

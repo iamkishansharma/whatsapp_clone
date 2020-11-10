@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'package:keyboard_avoider/keyboard_avoider.dart';
 import 'Messages.dart';
-
+import 'Constants.dart' as cons;
 class ChatDetail extends StatefulWidget {
   final String name;
   final String photo;
@@ -16,8 +16,9 @@ class _ChatDetailState extends State<ChatDetail> {
   Widget build(BuildContext context) {
     return Container(
       child: Scaffold(
+        resizeToAvoidBottomInset:true,
           appBar: AppBar(
-            backgroundColor: Color(0xff076E64),
+            backgroundColor: cons.mainColor,
             title: Row(
               children: <Widget>[
                 ClipOval(
@@ -34,9 +35,9 @@ class _ChatDetailState extends State<ChatDetail> {
               ],
             ),
             actions: <Widget>[
-              IconButton(icon: Icon(Icons.videocam, color: Colors.white)),
-              IconButton(icon: Icon(Icons.call, color: Colors.white)),
-              IconButton(icon: Icon(Icons.more_vert, color: Colors.white))
+              IconButton(icon: Icon(Icons.videocam, color: cons.appTextColor)),
+              IconButton(icon: Icon(Icons.call, color: cons.appTextColor)),
+              IconButton(icon: Icon(Icons.more_vert, color: cons.appTextColor))
             ],
           ),
           body: Container(
@@ -71,7 +72,7 @@ class _ChatDetailState extends State<ChatDetail> {
                             width: 100.0,
                             decoration: BoxDecoration(
                                 color: item.toMe
-                                    ? Colors.white
+                                    ? cons.appBackgroundColor
                                     : Color.fromRGBO(220, 248, 200, 1),
                                 borderRadius: BorderRadius.circular(10),
                                 boxShadow: [
@@ -93,16 +94,16 @@ class _ChatDetailState extends State<ChatDetail> {
                                 Row(
                                     mainAxisAlignment: MainAxisAlignment.end,
                                     crossAxisAlignment:
-                                        CrossAxisAlignment.center,
+                                    CrossAxisAlignment.center,
                                     children: <Widget>[
                                       Text(
                                         item.time,
                                         style: TextStyle(
-                                            fontSize: 12, color: Colors.grey),
+                                            fontSize: 12, color: cons.appTickColor),
                                       ),
                                       !item.toMe
                                           ? Icon(Icons.done_all,
-                                              size: 16, color: Colors.grey)
+                                          size: 16, color: cons.appTickColor)
                                           : Container()
                                     ])
                               ],
@@ -110,9 +111,10 @@ class _ChatDetailState extends State<ChatDetail> {
                       },
                     ),
                   ),
+                  //Input field from here
                   Container(
                       padding:
-                          EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
+                      EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
                       child: Row(
                         children: <Widget>[
                           Expanded(
@@ -120,7 +122,7 @@ class _ChatDetailState extends State<ChatDetail> {
                               padding: EdgeInsets.symmetric(
                                   horizontal: 10.0, vertical: 2.0),
                               decoration: BoxDecoration(
-                                  color: Colors.white,
+                                  color: cons.appBackgroundColor,
                                   borderRadius: BorderRadius.circular(30.0),
                                   boxShadow: [
                                     BoxShadow(
@@ -140,7 +142,7 @@ class _ChatDetailState extends State<ChatDetail> {
                                               child: Icon(
                                                   Icons
                                                       .sentiment_very_satisfied,
-                                                  color: Colors.grey)),
+                                                  color: cons.appTickColor)),
                                           onTap: () {})),
                                   Expanded(
                                     child: TextField(
@@ -148,7 +150,7 @@ class _ChatDetailState extends State<ChatDetail> {
                                           border: InputBorder.none,
                                           hintText: 'Write a message',
                                           hintStyle:
-                                              TextStyle(color: Colors.grey)),
+                                          TextStyle(color: cons.appTickColor)),
                                     ),
                                   ),
                                   Material(
@@ -160,7 +162,7 @@ class _ChatDetailState extends State<ChatDetail> {
                                               child: Icon(
                                                 Icons.attach_file,
                                                 size: 22.0,
-                                                color: Colors.grey,
+                                                color: cons.appTickColor,
                                               )),
                                           onTap: () {})),
                                   Material(
@@ -170,7 +172,7 @@ class _ChatDetailState extends State<ChatDetail> {
                                               padding: EdgeInsets.symmetric(
                                                   horizontal: 4.0),
                                               child: Icon(Icons.camera_alt,
-                                                  color: Colors.grey)),
+                                                  color: cons.appTickColor)),
                                           onTap: () {}))
                                 ],
                               ),
@@ -179,14 +181,16 @@ class _ChatDetailState extends State<ChatDetail> {
                           Container(
                             margin: EdgeInsets.only(left: 10.0),
                             child: Material(
-                              color: Color(0xff076E64),
+                              color: cons.mainColor,
                               borderRadius: BorderRadius.circular(25.0),
                               child: InkWell(
-                                  onTap: () {},
+                                  onTap: () {
+                                    print("This is a rcord button");
+                                  },
                                   child: Container(
                                     width: 50.0,
                                     height: 50.0,
-                                    child: Icon(Icons.mic, color: Colors.white),
+                                    child: Icon(Icons.mic, color: cons.appTextColor),
                                   )),
                             ),
                           )
@@ -195,7 +199,9 @@ class _ChatDetailState extends State<ChatDetail> {
                 ],
               ),
             ),
-          )),
+          ),
+      ),
     );
   }
 }
+
