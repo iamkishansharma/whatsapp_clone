@@ -32,7 +32,6 @@ dependencies:
   fluttertoast: ^4.0.0
   image_picker: ^0.6.5
   firebase_storage: ^3.1.5
-  keyboard_avoider: ^0.1.2
   cloud_firestore:
   firebase_core:
   badges:
