@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:keyboard_avoider/keyboard_avoider.dart';
 import 'Messages.dart';
 import 'Constants.dart' as cons;
 class ChatDetail extends StatefulWidget {
   final String name;
-  final String photo;
+  final Image photo;
 
   ChatDetail({@required this.name, @required this.photo});
 
@@ -22,12 +21,8 @@ class _ChatDetailState extends State<ChatDetail> {
             title: Row(
               children: <Widget>[
                 ClipOval(
-                    child: Image.asset(
-                  widget.photo,
-                  fit: BoxFit.cover,
-                  width: 40.0,
-                  height: 40.0,
-                )),
+                    child: widget.photo,
+                ),
                 Container(
                   margin: EdgeInsets.only(left: 10.0),
                   child: Text(widget.name),

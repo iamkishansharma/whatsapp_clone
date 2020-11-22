@@ -168,6 +168,7 @@ _getSignIn(_email, _password, context) {
         }
         if (authResult != null) {
           print("${_email.text} has been Logged In..");
+          FirebaseUser user = await auth.currentUser();
           //goto home
           Navigator.pushReplacement(
               //goto main screen

@@ -1,10 +1,15 @@
+import 'dart:io';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'Login.dart';
+import 'package:image_picker/image_picker.dart';
+
 import 'Constants.dart' as cons;
+import 'Login.dart';
 
 class SignUpScreen extends StatelessWidget {
   @override
@@ -12,7 +17,7 @@ class SignUpScreen extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        resizeToAvoidBottomInset:true,
+        resizeToAvoidBottomInset: true,
         backgroundColor: Colors.red,
         body: MySignUp(),
       ),
@@ -30,6 +35,32 @@ class _MySignUpState extends State<MySignUp> {
   TextEditingController _password = TextEditingController();
   TextEditingController _name = TextEditingController();
 
+  File _image;
+  final picker = ImagePicker();
+  Future getImage() async {
+    final pickedFile =
+    await picker.getImage(source: ImageSource.gallery);
+
+    setState(() {
+      if (pickedFile != null) {
+        _image = File(pickedFile.path);
+      } else {
+        print('No image selected.');
+      }
+    });
+  }
+  uploadPic()async{
+    File pikedImage;
+    if(_image!=null){
+      pikedImage= _image;
+    }
+    FirebaseAuth auth = FirebaseAuth.instance;
+    FirebaseUser user = await auth.currentUser();
+    StorageReference storageReference = FirebaseStorage.instance.ref().child(user.email).child("profilePic.jpg");
+    StorageUploadTask uploadTask = storageReference.putFile(pikedImage);
+    StorageTaskSnapshot storageTaskSnapshot = await uploadTask.onComplete;
+    print("Profile pic uploaded!");
+  }
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -39,9 +70,33 @@ class _MySignUpState extends State<MySignUp> {
           child: Column(
             children: <Widget>[
               _getHeader(),
-              _getImage(context),
+              // _getImage(context),
+
+              Expanded(
+                flex: 2,
+                child: InkWell(
+                  onTap: () async{
+                    print("Image");
+                    getImage();
+                  },
+                  child: CircleAvatar(
+                    backgroundColor: cons.mainColor,
+                    radius: MediaQuery.of(context).size.width / 4,
+                    child: ClipOval(
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width / 2.2,
+                        height: MediaQuery.of(context).size.width / 2.2,
+                        child: Image.asset(_image!=null?_image.path:"assets/images/pro3.png",
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+
               _getTextFields(_email, _password, _name),
-              _getSignUp(_email, _password, _name, context),
+              _getSignUp(_email, _password, _name, context, uploadPic),
               _getBottomRow(context),
             ],
           ),
@@ -78,7 +133,7 @@ _getBottomRow(context) {
   );
 }
 
-void addUser(email, fullname) async {
+void addUser(email, fullname,uploadPic) async {
   FirebaseUser firebaseUser = await FirebaseAuth.instance.currentUser();
   DocumentReference documentReference =
       Firestore.instance.collection('users').document(firebaseUser.uid);
@@ -88,11 +143,11 @@ void addUser(email, fullname) async {
         'fullname': fullname, // John Doe
         'email': email,
       })
-      .then((value) => print("User Added"))
+      .then((value) => uploadPic())
       .catchError((error) => print("Failed to add user: $error"));
 }
 
-_getSignUp(_email, _password, _name, context) {
+_getSignUp(_email, _password, _name, context,uploadPic) {
   return FlatButton(
     onPressed: () async {
       if (_email.text.toString() != null &&
@@ -106,8 +161,8 @@ _getSignUp(_email, _password, _name, context) {
             email: _email.text, password: _password.text);
         if (authResult.additionalUserInfo.isNewUser != null) {
           print("${_email.text} has been Register..");
+          addUser(_email.text, _name.text,uploadPic);
 
-          addUser(_email.text, _name.text);
           Navigator.pushReplacement(
               context,
               MaterialPageRoute(
@@ -125,7 +180,9 @@ _getSignUp(_email, _password, _name, context) {
           Text(
             'Sign up',
             style: TextStyle(
-                color: cons.appTextColor, fontSize: 25, fontWeight: FontWeight.w500),
+                color: cons.appTextColor,
+                fontSize: 25,
+                fontWeight: FontWeight.w500),
           ),
           CircleAvatar(
             backgroundColor: Colors.grey.shade800,
@@ -214,32 +271,14 @@ _getHeader() {
       child: Text(
         'Create\n       Account',
         style: TextStyle(
-            color: cons.appTextColor, fontSize: 50, fontWeight: FontWeight.bold),
+            color: cons.appTextColor,
+            fontSize: 50,
+            fontWeight: FontWeight.bold),
       ),
     ),
   );
 }
+
 _getImage(context) {
-  return Expanded(
-    flex: 2,
-    child: InkWell(
-      onTap: (){
-        print("Image");
-      },
-      child: CircleAvatar(
-        backgroundColor: cons.mainColor,
-        radius: MediaQuery.of(context).size.width/4,
-        child: ClipOval(
-          child: SizedBox(
-            width: MediaQuery.of(context).size.width/2.2,
-            height: MediaQuery.of(context).size.width/2.2,
-            child: Image.asset(
-              "assets/images/pro1.png",
-              fit: BoxFit.cover,
-            ),
-          ),
-        ),
-      ),
-    ),
-  );
+  return;
 }

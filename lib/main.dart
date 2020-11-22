@@ -24,6 +24,7 @@ void main() async {
 enum Choice { group, broadcast, wweb, messages, settings }
 
 class WhatsApp extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -47,7 +48,7 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
 
   @override
   void initState() {
-    controller = new TabController(length: 4, vsync: this);
+    controller = new TabController(length: 4, vsync: this, initialIndex: 1);
     super.initState();
   }
 
