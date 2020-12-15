@@ -1,16 +1,43 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'Messages.dart';
 import 'Constants.dart' as cons;
+import 'package:modal_progress_hud/modal_progress_hud.dart';
+
+final _firestore = Firestore.instance;
+String other;
+FirebaseUser loggedInUser;
 class ChatDetail extends StatefulWidget {
   final String name;
   final Image photo;
-
-  ChatDetail({@required this.name, @required this.photo});
+  final String emaill;
+  ChatDetail({@required this.emaill,@required this.name, @required this.photo});
 
   _ChatDetailState createState() => _ChatDetailState();
 }
 
 class _ChatDetailState extends State<ChatDetail> {
+  String messageText;
+  final _auth = FirebaseAuth.instance;
+  final messageTextController = TextEditingController();
+  @override
+  void initState() {
+    getCurrentUser();
+    other = widget.emaill;
+    super.initState();
+  }
+
+  void getCurrentUser() async {
+    try {
+      final user = await _auth.currentUser();
+      if (user != null) {
+        loggedInUser = user;
+      }
+    } catch (e) {
+      print(e);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -44,68 +71,10 @@ class _ChatDetailState extends State<ChatDetail> {
             ),
             child: SafeArea(
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
-                  Expanded(
-                    child: ListView.builder(
-                      reverse: true,
-                      itemCount: messages.length,
-                      itemBuilder: (context, index) {
-                        final item = messages[index];
-                        final prevItem = index > 0 ? messages[index - 1] : null;
-                        final bool removeTopMargin =
-                            index > 0 && (item.toMe == prevItem.toMe);
-                        final double twentyPercent =
-                            MediaQuery.of(context).size.width * 0.2;
-                        return Container(
-                            margin: EdgeInsets.only(
-                                left: item.toMe ? 10.0 : twentyPercent,
-                                right: item.toMe ? twentyPercent : 10.0,
-                                bottom: removeTopMargin ? 0.0 : 5.0,
-                                top: 5.0),
-                            padding: EdgeInsets.only(
-                                left: 8.0, right: 8.0, top: 8.0, bottom: 2.0),
-                            width: 100.0,
-                            decoration: BoxDecoration(
-                                color: item.toMe
-                                    ? cons.appBackgroundColor
-                                    : Color.fromRGBO(220, 248, 200, 1),
-                                borderRadius: BorderRadius.circular(10),
-                                boxShadow: [
-                                  BoxShadow(
-                                      color: Color.fromRGBO(51, 51, 51, 0.6),
-                                      blurRadius: 0.0,
-                                      offset: Offset(0, 0))
-                                ]),
-                            child: Column(
-                              mainAxisAlignment: item.toMe
-                                  ? MainAxisAlignment.start
-                                  : MainAxisAlignment.end,
-                              children: <Widget>[
-                                Align(
-                                  alignment: Alignment.centerLeft,
-                                  child: Text(item.message,
-                                      style: TextStyle(fontSize: 16)),
-                                ),
-                                Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
-                                    crossAxisAlignment:
-                                    CrossAxisAlignment.center,
-                                    children: <Widget>[
-                                      Text(
-                                        item.time,
-                                        style: TextStyle(
-                                            fontSize: 12, color: cons.appTickColor),
-                                      ),
-                                      !item.toMe
-                                          ? Icon(Icons.done_all,
-                                          size: 16, color: cons.appTickColor)
-                                          : Container()
-                                    ])
-                              ],
-                            ));
-                      },
-                    ),
-                  ),
+                  MessageStreamer(),
                   //Input field from here
                   Container(
                       padding:
@@ -141,6 +110,10 @@ class _ChatDetailState extends State<ChatDetail> {
                                           onTap: () {})),
                                   Expanded(
                                     child: TextField(
+                                      controller: messageTextController,
+                                      onChanged: (value){
+                                        messageText = value;
+                                      },
                                       decoration: InputDecoration(
                                           border: InputBorder.none,
                                           hintText: 'Write a message',
@@ -180,12 +153,20 @@ class _ChatDetailState extends State<ChatDetail> {
                               borderRadius: BorderRadius.circular(25.0),
                               child: InkWell(
                                   onTap: () {
-                                    print("This is a rcord button");
+                                    messageTextController.clear();
+                                    setState(() {
+                                      getCurrentUser();
+                                    });
+                                    _firestore.collection('messages').add({
+                                      'text': messageText,
+                                      'sender': loggedInUser.email,
+                                      'receiver': widget.emaill,
+                                    });
                                   },
                                   child: Container(
                                     width: 50.0,
                                     height: 50.0,
-                                    child: Icon(Icons.mic, color: cons.appTextColor),
+                                    child: Icon(Icons.send, color: cons.appTextColor),
                                   )),
                             ),
                           )
@@ -200,3 +181,93 @@ class _ChatDetailState extends State<ChatDetail> {
   }
 }
 
+
+class MessageBubble extends StatelessWidget {
+  final String text;
+  final String sender;
+  bool isMe;
+  MessageBubble({this.text, this.sender, this.isMe});
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.all(10.0),
+      child: Column(
+        crossAxisAlignment:
+        isMe ? CrossAxisAlignment.end : CrossAxisAlignment.start,
+        children: <Widget>[
+          Text(
+            '$sender',
+            style: TextStyle(
+              fontSize: 12.0,
+              color: isMe ? Colors.black54 : Colors.black,
+            ),
+          ),
+          Material(
+            borderRadius: isMe
+                ? BorderRadius.only(
+                topLeft: Radius.circular(30),
+                bottomLeft: Radius.circular(30),
+                bottomRight: Radius.circular(30))
+                : BorderRadius.only(
+                topRight: Radius.circular(30),
+                bottomLeft: Radius.circular(30),
+                bottomRight: Radius.circular(30)),
+            elevation: 5,
+            color: isMe ? Colors.lightBlue : Colors.white,
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 10.0),
+              child: Text(
+                '$text',
+                style: TextStyle(
+                    color: isMe ? Colors.white : Colors.black, fontSize: 15.0),
+              ),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class MessageStreamer extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return StreamBuilder<QuerySnapshot>(
+      stream: _firestore.collection('messages').snapshots(),
+      builder: (context, snapshot) {
+        if (snapshot.hasData) {
+          final messages = snapshot.data.documents.reversed;
+          List<MessageBubble> messageBubbles = [];
+          for (var message in messages) {
+            final text = message.data['text'];
+            final sender = message.data['sender'];
+            final String receiver = message.data['receiver'];
+
+            final currentUser = loggedInUser.email;
+
+            if(receiver==other){
+              final messageWidget = MessageBubble(
+                text: text,
+                sender: sender,
+                isMe: currentUser == sender,
+              );
+              messageBubbles.add(messageWidget);
+            }
+          }
+          return Expanded(
+            child: ListView(
+              reverse: true,
+              padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
+              children: messageBubbles,
+            ),
+          );
+        } else {
+          return ModalProgressHUD(
+            inAsyncCall: true,
+            child: Text("Haluwa"),
+          );
+        }
+      },
+    );
+  }
+}

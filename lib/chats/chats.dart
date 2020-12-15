@@ -47,6 +47,7 @@ class ChatsHomeState extends State<ChatsHome> {
               context,
               MaterialPageRoute(
                   builder: (context) => ChatDetail(
+                    emaill:row.email,
                       name: row.fullname, photo: (storageReference!= null && storageReference.path.contains(row.email))!= null? Image.network(urlLink,fit: BoxFit.cover,width: 40,height: 40,) : Image.asset("assets/images/pro1.png",fit: BoxFit.cover,width: 40,height: 40,))));
         },
         child: Column(
